@@ -1,0 +1,39 @@
+Use this sheet to record your equivance partitions/classes and your boundary values,,,,,
+,,,,,
+Feature Under Test,Equivalence Class,Boundary Values,Test Data for Equivalence Class,Test Data for Boundary Values,Comments
+From,up to 50 characters(valid),"0 character, 1 character, 2 characters; 49 characters, 50 characters, 51 characters","1600 Pennsylvania Avenue NW, Washington, DC 20500","
+7
+St
+1600 Pennsylvania Avenue NW, Washington, DC 20500
+1234 Maple Avenue Suite 56B New York NY 10001 5678
+350 Fifth Avenue, Suite 6700, New York, NY 10118-01",
+,>50 characters(invalid),"49 characters, 50 characters, 51 characters","350 Fifth Avenue, Suite 6700, New York, NY 10118-0110","1600 Pennsylvania Avenue NW, Washington, DC 20500
+1234 Maple Avenue Suite 56B New York NY 10001 5678
+350 Fifth Avenue, Suite 6700, New York, NY 10118-01",
+,Latin characters(valid),,"123 West Elmwood Avenue, Springfield, IL 62704",,
+,numbers(valid),,"1234 Oak Street, Apt 56, Los Angeles, CA 90001",,
+,dashes(valid),,"Yehuda ha-Levi St 4, Tel Aviv-Yafo, 6513506",,
+,commas(valid),,"1234 Oak Street, Los Angeles, CA 90001",,
+,periods(valid),,"1234 Maple Ave., Suite 56, Chicago, IL 60601",,
+,spaces(valid),,"11019 Common Rd, Warren, MI 48093, USA",,
+,non-Latin characters(invalid),,Haejeo-ri 해저리,,
+,space at the beginning(valid),,"  11019 Common Rd, Warren, MI 48093, USA",,
+,space at the end(valid),,"456 Elm Avenue, Suite 7, Denver, CO 80202 ",,
+,,,,,
+,,,,,
+To,up to 50 characters(valid),"0 character, 1 character, 2 characters; 49 characters, 50 characters, 51 characters","1600 Pennsylvania Avenue NW, Washington, DC 20500","
+7
+Dr
+1600 Pennsylvania Avenue NW, Washington, DC 20500
+7890 Maple Drive, Apt 101, San Francisco, CA 94102
+350 Fifth Avenue, Suite 6700, New York, NY 1011801",
+,>50 characters(invalid),"49 characters, 50 characters, 51 characters","7890 Birchwood Road, Apartment 123, Los Angeles, CA 90045-6789","1600 Pennsylvania Avenue NW, Washington, DC 20500 7890 Maple Drive, Apt 101, San Francisco, CA 94102 350 Fifth Avenue, Suite 6700, New York, NY 1011801",
+,Latin characters(valid),,"123 West Elmwood Avenue, Springfield, IL 62704",,
+,numbers(valid),,"123 West Elmwood Avenue, Springfield, IL 62704",,
+,dashes(valid),,"136-39 37th Ave, Flushing, NY 11354, USA",,
+,commas(valid),,"1234 Oak Street, Apt 56, Los Angeles, CA 90001",,
+,periods(valid),,"123. Main Street, Suite 4.5, Boston, MA 02118",,
+,spaces(valid),,"11019 Common Rd, Warren, MI 48093, USA",,
+,non-Latin characters(invalid),,〒100-0005 東京都千代田区丸の内1丁目1-1,,
+,space at the beginning(valid),,"  456 Elm Avenue, Suite 7, Denver, CO 80202",,
+,space at the end(valid),,"11019 Common Rd, Warren, MI 48093, USA   ",,

@@ -1,39 +1,70 @@
-Use this sheet to record your equivance partitions/classes and your boundary values,,,,,
-,,,,,
-Feature Under Test,Equivalence Class,Boundary Values,Test Data for Equivalence Class,Test Data for Boundary Values,Comments
-From,up to 50 characters(valid),"0 character, 1 character, 2 characters; 49 characters, 50 characters, 51 characters","1600 Pennsylvania Avenue NW, Washington, DC 20500","
-7
-St
-1600 Pennsylvania Avenue NW, Washington, DC 20500
-1234 Maple Avenue Suite 56B New York NY 10001 5678
-350 Fifth Avenue, Suite 6700, New York, NY 10118-01",
-,>50 characters(invalid),"49 characters, 50 characters, 51 characters","350 Fifth Avenue, Suite 6700, New York, NY 10118-0110","1600 Pennsylvania Avenue NW, Washington, DC 20500
-1234 Maple Avenue Suite 56B New York NY 10001 5678
-350 Fifth Avenue, Suite 6700, New York, NY 10118-01",
-,Latin characters(valid),,"123 West Elmwood Avenue, Springfield, IL 62704",,
-,numbers(valid),,"1234 Oak Street, Apt 56, Los Angeles, CA 90001",,
-,dashes(valid),,"Yehuda ha-Levi St 4, Tel Aviv-Yafo, 6513506",,
-,commas(valid),,"1234 Oak Street, Los Angeles, CA 90001",,
-,periods(valid),,"1234 Maple Ave., Suite 56, Chicago, IL 60601",,
-,spaces(valid),,"11019 Common Rd, Warren, MI 48093, USA",,
-,non-Latin characters(invalid),,Haejeo-ri 해저리,,
-,space at the beginning(valid),,"  11019 Common Rd, Warren, MI 48093, USA",,
-,space at the end(valid),,"456 Elm Avenue, Suite 7, Denver, CO 80202 ",,
-,,,,,
-,,,,,
-To,up to 50 characters(valid),"0 character, 1 character, 2 characters; 49 characters, 50 characters, 51 characters","1600 Pennsylvania Avenue NW, Washington, DC 20500","
-7
-Dr
-1600 Pennsylvania Avenue NW, Washington, DC 20500
-7890 Maple Drive, Apt 101, San Francisco, CA 94102
-350 Fifth Avenue, Suite 6700, New York, NY 1011801",
-,>50 characters(invalid),"49 characters, 50 characters, 51 characters","7890 Birchwood Road, Apartment 123, Los Angeles, CA 90045-6789","1600 Pennsylvania Avenue NW, Washington, DC 20500 7890 Maple Drive, Apt 101, San Francisco, CA 94102 350 Fifth Avenue, Suite 6700, New York, NY 1011801",
-,Latin characters(valid),,"123 West Elmwood Avenue, Springfield, IL 62704",,
-,numbers(valid),,"123 West Elmwood Avenue, Springfield, IL 62704",,
-,dashes(valid),,"136-39 37th Ave, Flushing, NY 11354, USA",,
-,commas(valid),,"1234 Oak Street, Apt 56, Los Angeles, CA 90001",,
-,periods(valid),,"123. Main Street, Suite 4.5, Boston, MA 02118",,
-,spaces(valid),,"11019 Common Rd, Warren, MI 48093, USA",,
-,non-Latin characters(invalid),,〒100-0005 東京都千代田区丸の内1丁目1-1,,
-,space at the beginning(valid),,"  456 Elm Avenue, Suite 7, Denver, CO 80202",,
-,space at the end(valid),,"11019 Common Rd, Warren, MI 48093, USA   ",,
+Test Cases for Project 2,,,,,,,,,
+ id,Test Case,Precondition,Steps,Test Technique,Test Data,Expected Result,Environment,Actual Result,Test Status (Pass / Fail) 
+t-1,"Check the user can put numbers in ""From"" field","1) The Server has already started.
+2) From field is empty.  ","- Enter numbers in the From field
+      ",positive testing,"1234 Oak Street, Apt 56, Los Angeles, CA 90001",Numbers are accepted in the From address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-2,"Check the user can put commas in ""From"" field","1) The Server has already started.
+2) From field is empty.  ","- Enter commas in the From field
+      ",positive testing,"1234 Oak Street, Los Angeles, CA 90001",Commas are accepted in the From address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-3,"Check the user can put Latin characters in ""From"" field","1) The Server has already started.
+2) From field is empty.  ","- Enter Latin characters in the From field
+      ",positive testing,"123 West Elmwood Avenue, Springfield, IL 62704",Latin characters are accepted in the From address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-4,"Check the user can put spaces in ""From"" field","1) The Server has already started.
+2) From field is empty.  ","- Enter spaces in the From field
+      ",positive testing,"11019 Common Rd, Warren, MI 48093, USA",Spaces are accepted in the From address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-5,"Check the user can put numbers in ""To"" field","1) The Server has already started.
+2) To field is empty.  ","- Enter numbers in the To field
+      ",positive testing,"123 West Elmwood Avenue, Springfield, IL 62704",Numbers are accepted in the To address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-6,"Check the user can put commas in ""To"" field","1) The Server has already started.
+2) To field is empty.  ","- Enter commas in the To field
+      ",positive testing,"1234 Oak Street, Apt 56, Los Angeles, CA 90001",Commas are accepted in the To address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-7,"Check the user can put Latin characters in ""To"" field","1) The Server has already started.
+2) To field is empty.  ","- Enter Latin characters in the To field
+      ",positive testing,"123 West Elmwood Avenue, Springfield, IL 62704",Latin characters are accepted in the To address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-8,"Check the user can put spaces in ""To"" field","1) The Server has already started.
+2) To field is empty.  ","- Enter spaces in the To field
+      ",positive testing,"11019 Common Rd, Warren, MI 48093, USA",Spaces are accepted in the To address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-9,"Check the user can put dashes in ""From"" field","1) The Server has already started.
+2) From field is empty.  ",- Enter address with dash in the From field,positive testing,"Yehuda ha-Levi St 4, Tel Aviv-Yafo, 6513506",Dashes are accepted in the From address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-10,"Check the user can put dashes in ""To"" field","1) The Server has already started.
+2) To field is empty.  ",- Enter address with dash in the To field,positive testing,"136-39 37th Ave, Flushing, NY 11354, USA",Dashes are accepted in the To address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-11,"Check the user can put periods in ""From"" field","1) The Server has already started.
+2) From field is empty.  ",- Enter address with period in the From field,positive testing,"1234 Maple Ave., Suite 56, Chicago, IL 60601",Periods are accepted in the From address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-12,"Check the user can put dashes in ""To"" field","1) The Server has already started.
+2) To field is empty.  ",- Enter address with period in the To field,positive testing,"123. Main Street, Suite 4.5, Boston, MA 02118",Periods are accepted in the To address field       ,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-13,"Check the user can't put non-Latin characters in ""From"" field","1) The Server has already started.
+2) From field is empty.  ",- Enter address with non-Latin characters in the From field,negative testing,Haejeo-ri 해저리,Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-14,"Check the user can't put non-Latin characters in ""To"" field","1) The Server has already started.
+2) To field is empty.  ",- Enter address with non-Latin characters in the To field,negative testing,〒100-0005 東京都千代田区丸の内1丁目1-1,Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-15,Check the user can put space at the beginning of the From field address,"1) The Server has already started.
+2) From field is empty.  ",- Enter address with space at the beginning in the From field and unfocus the field,positive testing,"  11019 Common Rd, Warren, MI 48093, USA",Spaces at the beginning of the From field are trimmed when the field is not in the focus,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address; the space isn't trimmed",Fail
+t-16,Check the user can put space at the beginning of the To  field address,"1) The Server has already started.
+2) To field is empty.  ",- Enter address with space at the beginning in the To field and unfocus the field,positive testing,"  456 Elm Avenue, Suite 7, Denver, CO 80202",Spaces at the beginning of the To field are trimmed when the field is not in the focus,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address; the space isn't trimmed",Fail
+t-17,Check the user can put space at the end of the From field address,"1) The Server has already started.
+2) From field is empty.  ",- Enter address with space at the end in the From field and unfocus the field,positive testing,"456 Elm Avenue, Suite 7, Denver, CO 80202 ",Spaces at the end of the From field are trimmed when the field is not in the focus,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address; the space isn't trimmed",Fail
+t-18,Check the user can put space at the end of the To  field address,"1) The Server has already started.
+2) To field is empty.  ",- Enter address with space at the end in the To field and unfocus the field,positive testing,"11019 Common Rd, Warren, MI 48093, USA ",Spaces at the end of the To field are trimmed when the field is not in the focus,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address; the space isn't trimmed",Fail
+t-19,Check the user can't put in the From field address which contains 51 characters,"1) The Server has already started.
+2) From field is empty.  ",- Enter address which contains 51 characters in the From field,negative testing,"350 Fifth Avenue, Suite 6700, New York, NY 10118-0110",Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-20,Check the user can't put in the To field address which contains 51 characters,"1) The Server has already started.
+2) To field is empty.  ",- Enter address which contains 51 characters in the To field,negative testing,"350 Fifth Avenue, Suite 6700, New York, NY 1011801",Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-21,Check the user can put in the From field address which contains exactly 50 characters,"1) The Server has already started.
+2) From field is empty.  ",- Enter address which contains exactly 50 characters in the From field,positive testing,"7890 Maple Drive, Apt 101, San Francisco, CA 94102",Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-22,Check the user can put in the To field address which contains exactly 50 characters,"1) The Server has already started.
+2) To field is empty.  ",- Enter address which contains exactly 50 characters in the To field,positive testing,"7890 Maple Drive, Apt 101, San Francisco, CA 94102",Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-23,Check the user can put in the From field address which contains 49 characters,"1) The Server has already started.
+2) From field is empty.  ",- Enter address which contains 49 characters in the From field,positive testing,"1600 Pennsylvania Avenue NW, Washington, DC 20500",Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-24,Check the user can put in the To field address which contains 49 characters,"1) The Server has already started.
+2) To field is empty.  ",- Enter address which contains 49 characters in the To field,positive testing,"1600 Pennsylvania Avenue NW, Washington, DC 20500",Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-25,Check the user can't put in the From field address which contains 0 character,"1) The Server has already started.
+2) From field is empty.  ",- Enter address which contains 0 characters in the From field,negative testing,,Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-26,Check the user can't put in the To field address which contains 0 character,"1) The Server has already started.
+2) To field is empty.  ",- Enter address which contains 0 characters in the To field,negative testing,,Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-27,Check the user can't put in the From field address which contains 1 character,"1) The Server has already started.
+2) From field is empty.  ",- Enter address which contains 1 character in the From field,negative testing,7,Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-28,Check the user can't put in the To field address which contains 1 character,"1) The Server has already started.
+2) To field is empty.  ",- Enter address which contains 1 character in the To field,negative testing,7,Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-29,Check the user can't put in the From field address which contains 2 characters,"1) The Server has already started.
+2) From field is empty.  ",- Enter address which contains 2 characters in the From field,negative testing,St,Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
+t-30,Check the user can't put in the To field address which contains 2 characters,"1) The Server has already started.
+2) To field is empty.  ",- Enter address which contains 2 characters in the To field,negative testing,Dr,Display of the error message “Incorrect address.”,"Windows 11, Google Chrome Browser; Google Chrome version 130.0.6723.92 (Official Build) (64-bit)","The field is highlighted in red, and under the field appears phrase Enter the address",Fail
